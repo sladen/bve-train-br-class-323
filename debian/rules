@@ -1,0 +1,68 @@
+#!/usr/bin/make -f
+export DH_VERBOSE=1
+
+TARGET = $(CURDIR)/debian/bve-train-br-class-323
+DOCTARGET = $(TARGET)/usr/share/doc/bve-train-br-class-323
+
+# Standarised location
+BVETARGET = $(TARGET)/usr/share/games/bve
+
+# Components
+TRAINDIR = Train/bve-train-br-class-323-unrefurb
+
+# Renamed to something Nicer
+TRAINTARGET = $(BVETARGET)/Train/BR_Class_323
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	touch configure-stamp
+
+build: build-stamp
+build-stamp: configure-stamp 
+	dh_testdir
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	rm -rf $(TARGET)
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+
+	# Hardlink the textures/models during building (for speed) since we don't modify them
+	for component in $(MODELDIR) $(SOUNDDIR) ; do \
+	  cp -al $(CURDIR)/$$component/* $(BVETARGET)/$$component/ ; \
+	done
+
+	# Change the Route name to something closer to the previous tarball
+	# A Copy is done, so that we can do an in-place 'sed' aftewards
+	cp -a $(CURDIR)/$(TRAINDIR)/* $(TRAINTARGET)/
+
+	# Note 'train.txt' is not documentation (it's used by the game)
+	mv $(TRAINTARGET)/Readme.txt $(DOCTARGET)/
+
+binary-arch:
+	# Do nothing
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_install
+	dh_installchangelogs
+	dh_installdocs
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep
+.PHONY: build clean binary-indep binary install configure
