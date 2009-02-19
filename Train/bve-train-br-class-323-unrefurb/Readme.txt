@@ -57,6 +57,9 @@ Version 4
 - Train performance and braking data configured
   by Steve Green.
 
+- 323_aws_bing.wav from an original recording by
+  John Owen.
+
 - Initial testing, feedback and ideas from Steve Green,
   Simon Townsend and Anthony Bowden.
 
