@@ -42,11 +42,8 @@ install: build
 	done
 
 	# Change the Route name to something closer to the previous tarball
-	# A Copy is done, so that we can do an in-place 'sed' aftewards
+	# A full copy is done, so that we can do an in-place 'sed' aftewards
 	cp -a $(CURDIR)/$(TRAINDIR)/* $(TRAINTARGET)/
-
-	# Note 'train.txt' is not documentation (it's used by the game)
-	mv $(TRAINTARGET)/Readme.txt $(DOCTARGET)/
 
 binary-arch:
 	# Do nothing
