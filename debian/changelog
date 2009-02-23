@@ -1,8 +1,8 @@
 br-class-323-unrefurb (4.0.1809-0ubuntu1) unreleased; urgency=low
 
-  * This package can be modularised to produce multiple binary
-    packages once the extent of overlap with other trains/route data
-    is understood.
+  * This package will probably be modularised in future to produce
+    multiple binary packages, once the extent of overlap with other
+    trains/route data is understood.
   * Initial release (LP: #331188)
 	
  -- Paul Sladen <ubuntu@paul.sladen.org>  Thu, 19 Feb 2009 15:36:48 +0000
