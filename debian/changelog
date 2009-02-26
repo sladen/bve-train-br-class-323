@@ -4,6 +4,8 @@ br-class-323-unrefurb (4.0.1809-0ubuntu1) unreleased; urgency=low
     multiple binary packages, once the extent of overlap with other
     trains/route data is understood.
   * Initial release (LP: #331188)
-	
+  * Recode .wav files to Ogg Vorbis to save space.  Inline rename
+    them (as .wav) for the moment as some filenames are hardcoded.
+
  -- Paul Sladen <ubuntu@paul.sladen.org>  Thu, 19 Feb 2009 15:36:48 +0000
 

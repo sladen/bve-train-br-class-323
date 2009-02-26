@@ -36,14 +36,12 @@ install: build
 	dh_clean -k 
 	dh_installdirs
 
-	# Hardlink the textures/models during building (for speed) since we don't modify them
-	for component in $(MODELDIR) $(SOUNDDIR) ; do \
-	  cp -al $(CURDIR)/$$component/* $(BVETARGET)/$$component/ ; \
-	done
-
-	# Change the Route name to something closer to the previous tarball
-	# A full copy is done, so that we can do an in-place 'sed' aftewards
+	# Change the Train name to something closer to the previous tarball
 	cp -a $(CURDIR)/$(TRAINDIR)/* $(TRAINTARGET)/
+
+        # Recode big .wavs to Ogg Vorbis;  SDL_LoadWAV loads them happily
+        # The impulse_noisetune is to keep the background hum and buzz
+        find $(TRAINTARGET) -type f -iname \*wav -exec oggenc --advanced-encode-option impulse_noisetune=-5 -6 -o {}.ogg {} \; -exec mv {}.ogg {} \;
 
 binary-arch:
 	# Do nothing
