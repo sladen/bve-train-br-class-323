@@ -1,4 +1,4 @@
-br-class-323-unrefurb (4.0.1809-0ubuntu1) unreleased; urgency=low
+bve-train-br-class-323 (4.0.1809-0ubuntu1) unreleased; urgency=low
 
   * This package will probably be modularised in future to produce
     multiple binary packages, once the extent of overlap with other
@@ -6,6 +6,7 @@ br-class-323-unrefurb (4.0.1809-0ubuntu1) unreleased; urgency=low
   * Initial release (LP: #331188)
   * Recode .wav files to Ogg Vorbis to save space.  Inline rename
     them (as .wav) for the moment as some filenames are hardcoded.
+  * Rename source-package-name to match binary-package-name
 
  -- Paul Sladen <ubuntu@paul.sladen.org>  Thu, 19 Feb 2009 15:36:48 +0000
 

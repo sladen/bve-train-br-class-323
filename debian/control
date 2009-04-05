@@ -1,12 +1,12 @@
-Source: br-class-323-unrefurb
+Source: bve-train-br-class-323
 Section: games
 Priority: optional
 Maintainer: Paul Sladen <ubuntu@paul.sladen.org>
 Build-Depends: debhelper (>= 5)
 Build-Depends-Indep: vorbis-tools
 Standards-Version: 3.8.0
-Vcs-Browser: http://github.com/sladen/br-class-323-unrefurb/tree/debian
-Vcs-Git: http://github.com/sladen/br-class-323-unrefurb.git
+Vcs-Browser: http://github.com/sladen/bve-train-br-class-323/tree/debian
+Vcs-Git: http://github.com/sladen/bve-train-br-class-323.git
 Homepage: http://www.trainsimcentral.co.uk/bve_train.htm
 
 Package: bve-train-br-class-323
