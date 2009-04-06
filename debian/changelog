@@ -7,6 +7,7 @@ bve-train-br-class-323 (4.0.1809-0ubuntu1) unreleased; urgency=low
   * Recode .wav files to Ogg Vorbis to save space.  Inline rename
     them (as .wav) for the moment as some filenames are hardcoded.
   * Rename source-package-name to match binary-package-name
+  * Include pseudo 'watch' file 
 
  -- Paul Sladen <ubuntu@paul.sladen.org>  Thu, 19 Feb 2009 15:36:48 +0000
 
