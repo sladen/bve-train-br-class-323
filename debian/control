@@ -1,7 +1,7 @@
 Source: bve-train-br-class-323
 Section: games
 Priority: optional
-Maintainer: Paul Sladen <ubuntu@paul.sladen.org>
+Maintainer: Paul Sladen <sladen@ubuntu.com>
 Build-Depends: debhelper (>= 5)
 Build-Depends-Indep: vorbis-tools
 Standards-Version: 3.8.0
