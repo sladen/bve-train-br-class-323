@@ -13,20 +13,15 @@ TRAINDIR = Train/bve-train-br-class-323-unrefurb
 # Renamed to something Nicer
 TRAINTARGET = $(BVETARGET)/Train/BR_Class_323
 
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	touch configure-stamp
-
 build: build-stamp
-build-stamp: configure-stamp 
+build-stamp:
 	dh_testdir
 	touch build-stamp
 
 clean:
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp configure-stamp
+	rm -f build-stamp
 	rm -rf $(TARGET)
 	dh_clean 
 
@@ -39,9 +34,9 @@ install: build
 	# Change the Train name to something closer to the previous tarball
 	cp -a $(CURDIR)/$(TRAINDIR)/* $(TRAINTARGET)/
 
-        # Recode big .wavs to Ogg Vorbis;  SDL_LoadWAV loads them happily
-        # The impulse_noisetune is to keep the background hum and buzz
-        find $(TRAINTARGET) -type f -iname \*wav -exec oggenc --advanced-encode-option impulse_noisetune=-5 -6 -o {}.ogg {} \; -exec mv {}.ogg {} \;
+	# Recode big .wavs to Ogg Vorbis;  SDL_LoadWAV loads them happily
+	# The impulse_noisetune is to keep the background hum and buzz
+	find $(TRAINTARGET) -type f -iname \*wav -exec oggenc --advanced-encode-option impulse_noisetune=-5 -6 -o {}.ogg {} \; -exec mv {}.ogg {} \;
 
 binary-arch:
 	# Do nothing
@@ -60,4 +55,4 @@ binary-indep: build install
 	dh_builddeb
 
 binary: binary-indep
-.PHONY: build clean binary-indep binary install configure
+.PHONY: build clean binary-indep binary install
