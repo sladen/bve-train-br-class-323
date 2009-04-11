@@ -4,15 +4,50 @@ on 2009-02-19 15:28 +0000
 It was downloaded from:
   http://www.trainsimcentral.co.uk/bve_train.htm
 
+  Following discussion with the authors, an extra upstream release
+  was specially prepared by the upstream authors, including the updated
+  Readme.  Two sounds were replaced with free-er versions and some other
+  Motor*.wav sounds were removed and replaced with silent sounds of
+  equivalent length.
+
 Upstream authors:
   Steve Green
   Anthony Bowden <anthony-b@railsimroutes.net>
   Steve Thomas
 
-Public domain:
+Copyright:
 
-  -----------
-  -=Licence=-
-  -----------
+  Copyright 2002-2009 Steve Green
+  Copyright 2004-2009 Simon Gathercole (panel/safety system extensions)
+  Copyright 2002-2009 Anthony Bowden (sounds and introductory image, external model)
+  Copyright 2004-2009 Steve Thomas (high-resolution panel and AWS sounds)
+  Copyright      2009 Richard Helliwell (external model texturing)
+  Copyright      2009 Paul Sladen (Debian packaging)
 
-  This train has been released into the Public Domain.
+  From 'Train/bve-train-br-class-323-unrefurb/Readme.txt':
+
+    This train has been released into the Public Domain.
+
+  Train/bve-train-br-class-323-unrefurb/panel2.cfg:
+
+    (c) S.Green and Steve Thomas 2004,2005 and 2009.
+    Modified (c) S.Gathercole 2004 and 2005
+
+  Train/bve-train-br-class-323-unrefurb/ext_view/*csv:
+
+    Originally by Steve Green & Anthony Bowden
+    Retextured by Richard Helliwell http://www.bveroutes-trains.co.uk
+
+    This file and any associated textures have been released into the
+    public domain and can be freely modified or re-used without
+    restrictions.   See 'Readme.txt'
+
+  Some of the .wav sounds contain a misleading "copyright" string
+  embedded in the RIFF metadata.  This string is advertising the
+  MS Windows-based software that was used during editing of the sounds
+  and does not appear to relate to the sounds themselves.
+
+  Any Debian-packaging additions are hereby placed into the Public Domain.
+
+
+
