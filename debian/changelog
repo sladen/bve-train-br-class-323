@@ -1,4 +1,4 @@
-bve-train-br-class-323 (4.0.1809-0ubuntu1) unreleased; urgency=low
+bve-train-br-class-323 (4.0.1809-0ubuntu1) jaunty; urgency=low
 
   * This package will probably be modularised in future to produce
     multiple binary packages, once the extent of overlap with other
@@ -9,5 +9,5 @@ bve-train-br-class-323 (4.0.1809-0ubuntu1) unreleased; urgency=low
   * Rename source-package-name to match binary-package-name
   * Include pseudo 'watch' file 
 
- -- Paul Sladen <ubuntu@paul.sladen.org>  Mon, 6 Apr 2009 22:45:47 +0000
+ -- Paul Sladen <ubuntu@paul.sladen.org>  Mon, 11 Apr 2009 13:29:03 +0000
 
