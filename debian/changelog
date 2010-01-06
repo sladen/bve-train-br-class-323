@@ -1,10 +1,10 @@
-bve-train-br-class-323 (4.0.1809-0ubuntu2) unreleased; urgency=low
+bve-train-br-class-323 (4.0.1809-0ubuntu2) lucid; urgency=low
 
   * debian/rules: comment out oggenc stage as openbve=1.2.4.1 uses
     a home-grown .wav only sound loader.
   * debian/control: Recommends: bve-train-br-class-323-3dcab
 	
- -- Paul Sladen <ubuntu@paul.sladen.org>  Wed,  6 Jan 2009 03:28:00 +0000
+ -- Paul Sladen <ubuntu@paul.sladen.org>  Wed,  6 Jan 2009 04:17:00 +0000
 	
 bve-train-br-class-323 (4.0.1809-0ubuntu1) jaunty; urgency=low
 
