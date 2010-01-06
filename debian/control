@@ -13,7 +13,7 @@ Package: bve-train-br-class-323
 Architecture: all
 Provides: bve-train
 Suggests: bve-route-cross-city-south
-Recommends: bve-engine
+Recommends: bve-engine, bve-train-br-class-323-3dcab
 Description: British Rail Class 323 EMU train (for OpenBVE rail simulator)
  Accurate simulation of a three-car electric mulitple unit used in
  West Midlands of the United Kingdom and built in the 1990s.
