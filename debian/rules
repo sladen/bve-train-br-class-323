@@ -36,7 +36,8 @@ install: build
 
 	# Recode big .wavs to Ogg Vorbis;  SDL_LoadWAV loads them happily
 	# The impulse_noisetune is to keep the background hum and buzz
-	find $(TRAINTARGET) -type f -iname \*wav -exec oggenc --advanced-encode-option impulse_noisetune=-1 -4 -o {}.ogg {} \; -exec mv {}.ogg {} \;
+	# Openbve-1.2.4.1 uses a home-grown .wav loader
+	#find $(TRAINTARGET) -type f -iname \*wav -exec oggenc --advanced-encode-option impulse_noisetune=-1 -4 -o {}.ogg {} \; -exec mv {}.ogg {} \;
 
 binary-arch:
 	# Do nothing
